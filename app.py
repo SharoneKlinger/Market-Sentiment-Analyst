@@ -35,5 +35,5 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
 
-web: python app.pygit add Procfile
-git commit -m "Add Procfile for Heroku deployment"git push heroku main
+web: python app.py
+```
