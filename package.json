@@ -1,0 +1,7 @@
+{
+  "name": "market-sentiment-analyst",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
