@@ -1,4 +1,4 @@
-# Use the official Python image from the Docker Hub
+echo '# Use the official Python image from the Docker Hub
 FROM python:3.9-slim
 
 # Set the working directory in the container
@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 
 # Run app.py when the container launches
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["flask", "run", "--host=0.0.0.0"]' > Dockerfile
