@@ -1,2 +1,2 @@
-web: python app.pygit add Procfile
+echo 'web: python app.py' > Procfile
 git commit -m "Add Procfile for Heroku deployment"
