@@ -1,0 +1,108 @@
+{
+  "$schema": "https://openclaw.ai/schemas/config.json",
+  "version": "1.0",
+
+  "gateway": {
+    "bind": "loopback",
+    "port": 18789,
+    "allowExternalConnections": false,
+    "requireAuthentication": true
+  },
+
+  "agent": {
+    "model": "anthropic/claude-opus-4-5",
+    "maxTokens": 4096,
+    "thinking": "medium"
+  },
+
+  "security": {
+    "sandboxMode": "strict",
+    "allowedCommands": [
+      "curl http://127.0.0.1:5000/*",
+      "curl http://localhost:5000/*"
+    ],
+    "blockedCommands": [
+      "rm",
+      "sudo",
+      "chmod",
+      "chown",
+      "wget",
+      "ssh",
+      "scp",
+      "nc",
+      "netcat",
+      "nmap",
+      "curl http://*",
+      "curl https://*"
+    ],
+    "allowedNetworkHosts": [
+      "127.0.0.1",
+      "localhost"
+    ],
+    "blockExternalNetwork": true,
+    "disableFileSystemWrite": true,
+    "disableShellEscape": true
+  },
+
+  "channels": {
+    "webchat": {
+      "enabled": true,
+      "requirePairing": true,
+      "bindToLoopback": true
+    },
+    "telegram": {
+      "enabled": false
+    },
+    "discord": {
+      "enabled": false
+    },
+    "slack": {
+      "enabled": false
+    },
+    "whatsapp": {
+      "enabled": false
+    },
+    "signal": {
+      "enabled": false
+    }
+  },
+
+  "dm": {
+    "allowFrom": "paired-only",
+    "requirePairingCode": true,
+    "unpaired": "reject"
+  },
+
+  "groups": {
+    "enabled": false,
+    "allowlist": []
+  },
+
+  "api": {
+    "authorizedEndpoints": [
+      {
+        "name": "Market Sentiment API",
+        "baseUrl": "http://127.0.0.1:5000",
+        "endpoints": [
+          {
+            "path": "/quote",
+            "method": "GET",
+            "description": "Get stock quote by symbol"
+          },
+          {
+            "path": "/sentiment",
+            "method": "GET",
+            "description": "Get market sentiment by symbol"
+          }
+        ]
+      }
+    ],
+    "blockUnauthorizedApis": true
+  },
+
+  "logging": {
+    "level": "info",
+    "logFile": "~/.openclaw/logs/openclaw.log",
+    "redactSensitiveData": true
+  }
+}
