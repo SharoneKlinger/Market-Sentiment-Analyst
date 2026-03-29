@@ -3,7 +3,7 @@
     "SessionStart": [
       {
         "type": "command",
-        "command": "git submodule update --init --recursive"
+        "command": "git submodule update --init --recursive && echo '--- SESSION INITIALIZED ---' && echo 'Autoresearch submodule: loaded' && echo 'Skills available: /autoresearch-oversight /market-sentiment /code-quality /context /brainstorm /reload' && echo 'Run /reload for full context or /context for project state' && echo '---'"
       }
     ]
   }
