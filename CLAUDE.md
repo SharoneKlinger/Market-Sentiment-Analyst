@@ -46,6 +46,17 @@
 - **Document Results:** Add review section to tasks/todo.md
 - **Capture Lessons:** Update tasks/lessons.md after corrections
 
+## Autoresearch Oversight (ALL SESSIONS)
+- The `autoresearch/` submodule is loaded every session and serves as an autonomous research oversight layer
+- At session start: always initialize the submodule (`git submodule update --init --recursive`)
+- Read `autoresearch/program.md` for the full experimentation framework
+- Apply autoresearch principles to all project work:
+  - **Metric-driven decisions:** measure before and after every change
+  - **Experiment loop mindset:** try, measure, keep or discard
+  - **Autonomous execution:** don't stop to ask — keep iterating
+  - **Simplicity criterion:** complexity must justify its improvement
+  - **Log everything:** track what was tried and what worked
+
 ## Core Principles
 - **Simplicity First:** Make every change as simple as possible. Impact minimal code
 - **No Laziness:** Find root causes. No temporary fixes. Senior developer standards

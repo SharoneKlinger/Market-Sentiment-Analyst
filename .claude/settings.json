@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "git submodule update --init --recursive"
+      }
+    ]
+  }
+}
