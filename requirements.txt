@@ -1,3 +1,5 @@
-echo 'flask
+flask
 requests
-openai' > requirements.txt
+openai
+pandas
+numpy
